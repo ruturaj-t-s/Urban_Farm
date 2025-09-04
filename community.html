@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growing Community | FarmUrban Urban Farmers Network</title>
+    <meta name="description" content="Join the FarmUrban growing community. Share recipes, get expert tips, connect with urban farmers worldwide, and discover community success stories.">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Growing Community | FarmUrban">
+    <meta property="og:description" content="Join thousands of urban farmers sharing recipes, tips, and success stories worldwide.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/index.css">
+</head>
+
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <svg class="h-8 w-8 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="font-bold text-xl text-foreground">FarmUrban</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" data-testid="nav-home" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                    <a href="how-it-works.html" data-testid="nav-how-it-works" class="nav-link text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                    <a href="plans.html" data-testid="nav-plans" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+                    <a href="products.html" data-testid="nav-products" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Products</a>
+                    <a href="impact.html" data-testid="nav-impact" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+                    <a href="community.html" data-testid="nav-community" class="nav-link text-primary font-medium">Community</a>
+                    <a href="blog.html" data-testid="nav-blog" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+                    <a href="about-contact.html" data-testid="nav-about" class="nav-link text-muted-foreground hover:text-foreground transition-colors">About</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" data-testid="button-mobile-menu" onclick="toggleMobileMenu()">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden fixed top-16 left-0 right-0 bg-background border-b border-border transform -translate-x-full transition-transform duration-300">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" data-testid="mobile-nav-home" class="block text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                <a href="how-it-works.html" data-testid="mobile-nav-how-it-works" class="block text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                <a href="plans.html" data-testid="mobile-nav-plans" class="block text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+                <a href="products.html" data-testid="mobile-nav-products" class="block text-muted-foreground hover:text-foreground transition-colors">Products</a>
+                <a href="impact.html" data-testid="mobile-nav-impact" class="block text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+                <a href="community.html" data-testid="mobile-nav-community" class="block text-primary font-medium">Community</a>
+                <a href="blog.html" data-testid="mobile-nav-blog" class="block text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+                <a href="about-contact.html" data-testid="mobile-nav-about" class="block text-muted-foreground hover:text-foreground transition-colors">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16">
+        <div class="py-16 bg-muted/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Growing Community</h1>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Join thousands of urban farmers sharing recipes, tips, and success stories. Connect with growers worldwide and be part of the urban farming revolution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Stats -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center bg-card rounded-2xl border border-border p-8">
+                    <div class="text-4xl font-bold text-primary counter" data-target="12500" data-testid="counter-community-members">0</div>
+                    <div class="text-muted-foreground mt-2 text-lg">Community Members</div>
+                    <p class="text-sm text-muted-foreground mt-2">Active growers worldwide</p>
+                </div>
+                <div class="text-center bg-card rounded-2xl border border-border p-8">
+                    <div class="text-4xl font-bold text-primary counter" data-target="850" data-testid="counter-shared-recipes">0</div>
+                    <div class="text-muted-foreground mt-2 text-lg">Shared Recipes</div>
+                    <p class="text-sm text-muted-foreground mt-2">From fresh garden harvests</p>
+                </div>
+                <div class="text-center bg-card rounded-2xl border border-border p-8">
+                    <div class="text-4xl font-bold text-primary counter" data-target="45" data-testid="counter-local-hubs">0</div>
+                    <div class="text-muted-foreground mt-2 text-lg">Local Hubs</div>
+                    <p class="text-sm text-muted-foreground mt-2">Cities with active groups</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Success Stories</h2>
+                <p class="text-xl text-muted-foreground">Real stories from our growing community members</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-card rounded-2xl border border-border p-6" data-testid="testimonial-sarah">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="font-bold text-primary">SA</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Sarah Anderson</div>
+                            <div class="text-sm text-muted-foreground">Home Grower • Seattle</div>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground italic mb-4">"I've been growing fresh herbs and lettuce for my family for 6 months now. The system is incredibly easy to use and the produce tastes amazing! My kids love picking their own salad greens."</p>
+                    <div class="text-sm text-primary">Growing: Basil, Lettuce, Mint</div>
+                </div>
+                
+                <div class="bg-card rounded-2xl border border-border p-6" data-testid="testimonial-marcus">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="font-bold text-primary">MJ</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Marcus Johnson</div>
+                            <div class="text-sm text-muted-foreground">Restaurant Owner • Austin</div>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground italic mb-4">"FarmUrban has revolutionized our restaurant's ingredient sourcing. Fresh, local, and sustainable - exactly what our customers want. We grow 80% of our herbs and microgreens on-site now."</p>
+                    <div class="text-sm text-primary">Growing: Microgreens, Herbs, Leafy Greens</div>
+                </div>
+                
+                <div class="bg-card rounded-2xl border border-border p-6" data-testid="testimonial-emma">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="font-bold text-primary">EL</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Emma Liu</div>
+                            <div class="text-sm text-muted-foreground">Urban Gardener • New York</div>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground italic mb-4">"Living in a small apartment, I never thought I could grow my own food. FarmUrban made it possible and so rewarding! I've saved hundreds on groceries and eat healthier than ever."</p>
+                    <div class="text-sm text-primary">Growing: Spinach, Kale, Cherry Tomatoes</div>
+                </div>
+            </div>
+
+            <!-- Featured Case Study -->
+            <div class="bg-card rounded-2xl border border-border p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="School children learning about plants in classroom garden" class="rounded-xl w-full h-auto"/>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Lincoln Elementary School</h3>
+                        <div class="text-primary font-medium mb-2">Educational Impact Case Study</div>
+                        <p class="text-muted-foreground mb-6">
+                            Lincoln Elementary integrated FarmUrban systems into their science curriculum. Students now learn about plant biology, nutrition, and sustainability hands-on. The school produces 200 pounds of fresh vegetables annually for their cafeteria.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-muted/50 rounded-lg p-4">
+                                <div class="text-2xl font-bold text-primary">95%</div>
+                                <div class="text-sm text-muted-foreground">Student engagement increase</div>
+                            </div>
+                            <div class="bg-muted/50 rounded-lg p-4">
+                                <div class="text-2xl font-bold text-primary">300</div>
+                                <div class="text-sm text-muted-foreground">Students reached</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Features -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Community Features</h2>
+                <p class="text-xl text-muted-foreground">Connect, learn, and grow together with fellow urban farmers</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-card rounded-2xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-comments text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Community Forum</h3>
+                    <p class="text-muted-foreground mb-4">Ask questions, share tips, and get advice from experienced growers and our expert team.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg transition-all">
+                        Join Discussion
+                    </button>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-utensils text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Recipe Exchange</h3>
+                    <p class="text-muted-foreground mb-4">Share and discover delicious recipes using fresh herbs and vegetables from your garden.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg transition-all">
+                        Browse Recipes
+                    </button>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-calendar-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Local Events</h3>
+                    <p class="text-muted-foreground mb-4">Attend workshops, meetups, and growing competitions in your area.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg transition-all">
+                        Find Events
+                    </button>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-trophy text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Growing Challenges</h3>
+                    <p class="text-muted-foreground mb-4">Participate in monthly growing challenges and showcase your harvest achievements.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg transition-all">
+                        View Challenges
+                    </button>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-graduation-cap text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Learning Hub</h3>
+                    <p class="text-muted-foreground mb-4">Access exclusive tutorials, webinars, and masterclasses from growing experts.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg transition-all">
+                        Start Learning
+                    </button>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-handshake text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Seed Swap</h3>
+                    <p class="text-muted-foreground mb-4">Trade seeds and cuttings with other community members to try new varieties.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-lg transition-all">
+                        Start Swapping
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Community Recipes -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Featured Community Recipes</h2>
+                <p class="text-xl text-muted-foreground">Delicious recipes shared by our growing community</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all" data-testid="recipe-pesto">
+                    <img src="https://images.unsplash.com/photo-1558818905-b4c0c83cc8fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Fresh basil pesto with home-grown basil" class="w-full h-32 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-semibold">Fresh Basil Pesto</h4>
+                            <div class="flex items-center text-sm text-muted-foreground">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>15 min</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-muted-foreground mb-3">Made with home-grown basil, pine nuts, and parmesan. Perfect for pasta or as a sandwich spread.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-xs text-muted-foreground">By Sarah Anderson</div>
+                            <button class="text-primary hover:text-primary/80 text-sm font-medium">View Recipe →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all" data-testid="recipe-salad">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Fresh mixed green salad with cherry tomatoes" class="w-full h-32 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-semibold">Garden Fresh Salad</h4>
+                            <div class="flex items-center text-sm text-muted-foreground">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>10 min</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-muted-foreground mb-3">Crisp lettuce, arugula, and cherry tomatoes from your garden with a light vinaigrette dressing.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-xs text-muted-foreground">By Emma Liu</div>
+                            <button class="text-primary hover:text-primary/80 text-sm font-medium">View Recipe →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all" data-testid="recipe-smoothie">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Green smoothie with fresh mint and leafy greens" class="w-full h-32 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-semibold">Green Power Smoothie</h4>
+                            <div class="flex items-center text-sm text-muted-foreground">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>5 min</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-muted-foreground mb-3">Nutrient-packed smoothie with fresh spinach, mint, and fruits from your garden for a healthy start.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-xs text-muted-foreground">By Marcus Johnson</div>
+                            <button class="text-primary hover:text-primary/80 text-sm font-medium">View Recipe →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Community CTA -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Ready to Join Our Growing Community?</h2>
+            <p class="text-xl text-muted-foreground mb-8">Connect with thousands of urban farmers, share your growing journey, and learn from experts worldwide.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="plans.html" class="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    Start Growing
+                </a>
+                <a href="blog.html" class="border border-border hover:bg-muted text-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    Browse Learning Hub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!--footer class="bg-card border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="font-bold text-xl">FarmUrban</span>
+                    </div>
+                    <p class="text-muted-foreground mb-4">Growing fresh food in urban spaces through smart technology and community support.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" data-testid="footer-twitter" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" data-testid="footer-facebook" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" data-testid="footer-linkedin" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" data-testid="footer-instagram" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Products</h4>
+                    <div class="space-y-2">
+                        <a href="products.html" data-testid="footer-indoor-systems" class="block text-muted-foreground hover:text-primary transition-colors">Indoor Systems</a>
+                        <a href="products.html" data-testid="footer-outdoor-systems" class="block text-muted-foreground hover:text-primary transition-colors">Outdoor Systems</a>
+                        <a href="products.html" data-testid="footer-commercial-solutions" class="block text-muted-foreground hover:text-primary transition-colors">Commercial Solutions</a>
+                        <a href="products.html" data-testid="footer-accessories" class="block text-muted-foreground hover:text-primary transition-colors">Accessories</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <div class="space-y-2">
+                        <a href="how-it-works.html" data-testid="footer-how-it-works" class="block text-muted-foreground hover:text-primary transition-colors">How it Works</a>
+                        <a href="blog.html" data-testid="footer-learning-hub" class="block text-muted-foreground hover:text-primary transition-colors">Learning Hub</a>
+                        <a href="community.html" data-testid="footer-community" class="block text-muted-foreground hover:text-primary transition-colors">Community</a>
+                        <a href="about-contact.html" data-testid="footer-contact-support" class="block text-muted-foreground hover:text-primary transition-colors">Contact Support</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <div class="space-y-2">
+                        <a href="about-contact.html" data-testid="footer-about-us" class="block text-muted-foreground hover:text-primary transition-colors">About Us</a>
+                        <a href="impact.html" data-testid="footer-environmental-impact" class="block text-muted-foreground hover:text-primary transition-colors">Environmental Impact</a>
+                        <a href="#" data-testid="footer-careers" class="block text-muted-foreground hover:text-primary transition-colors">Careers</a>
+                        <a href="#" data-testid="footer-privacy-policy" class="block text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-border mt-8 pt-8 text-center">
+                <p class="text-muted-foreground" data-testid="text-copyright">&copy; 2024 FarmUrban. All rights reserved.</p>
+            </div>
+        </div>
+    </footer-->
+
+    <!-- Footer -->
+<footer class="bg-footer text-footer-foreground border-t border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <svg class="h-8 w-8 text-footer-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span class="font-bold text-xl">FarmUrban</span>
+                </div>
+                <p class="text-footer-muted mb-4">Growing fresh food in urban spaces through smart technology and community support.</p>
+                <div class="flex space-x-4">
+                    <a href="#" data-testid="footer-twitter" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" data-testid="footer-facebook" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" data-testid="footer-linkedin" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" data-testid="footer-instagram" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Products</h4>
+                <div class="space-y-2">
+                    <a href="products.html" data-testid="footer-indoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Indoor Systems</a>
+                    <a href="products.html" data-testid="footer-outdoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Outdoor Systems</a>
+                    <a href="products.html" data-testid="footer-commercial-solutions" class="block text-footer-muted hover:text-footer-link transition-colors">Commercial Solutions</a>
+                    <a href="products.html" data-testid="footer-accessories" class="block text-footer-muted hover:text-footer-link transition-colors">Accessories</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Support</h4>
+                <div class="space-y-2">
+                    <a href="how-it-works.html" data-testid="footer-how-it-works" class="block text-footer-muted hover:text-footer-link transition-colors">How it Works</a>
+                    <a href="blog.html" data-testid="footer-learning-hub" class="block text-footer-muted hover:text-footer-link transition-colors">Learning Hub</a>
+                    <a href="community.html" data-testid="footer-community" class="block text-footer-muted hover:text-footer-link transition-colors">Community</a>
+                    <a href="about-contact.html" data-testid="footer-contact-support" class="block text-footer-muted hover:text-footer-link transition-colors">Contact Support</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Company</h4>
+                <div class="space-y-2">
+                    <a href="about-contact.html" data-testid="footer-about-us" class="block text-footer-muted hover:text-footer-link transition-colors">About Us</a>
+                    <a href="impact.html" data-testid="footer-environmental-impact" class="block text-footer-muted hover:text-footer-link transition-colors">Environmental Impact</a>
+                    <a href="#" data-testid="footer-careers" class="block text-footer-muted hover:text-footer-link transition-colors">Careers</a>
+                    <a href="#" data-testid="footer-privacy-policy" class="block text-footer-muted hover:text-footer-link transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-footer-divider mt-8 pt-8 text-center">
+            <p class="text-footer-muted" data-testid="text-copyright">&copy; 2024 FarmUrban. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="src/main.js"></script>
+
+</body> </html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Farming Products | FarmUrban Smart Growing Systems</title>
+    <meta name="description" content="Explore FarmUrban's range of smart urban farming products. From countertop systems to commercial solutions, find the perfect growing system for your space.">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Urban Farming Products | FarmUrban">
+    <meta property="og:description" content="Smart urban farming systems for every space. Browse our innovative growing solutions.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/index.css">
+</head>
+
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <svg class="h-8 w-8 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="font-bold text-xl text-foreground">FarmUrban</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" data-testid="nav-home" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                    <a href="how-it-works.html" data-testid="nav-how-it-works" class="nav-link text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                    <a href="plans.html" data-testid="nav-plans" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+                    <a href="products.html" data-testid="nav-products" class="nav-link text-primary font-medium">Products</a>
+                    <a href="impact.html" data-testid="nav-impact" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+                    <a href="community.html" data-testid="nav-community" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Community</a>
+                    <a href="blog.html" data-testid="nav-blog" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+                    <a href="about-contact.html" data-testid="nav-about" class="nav-link text-muted-foreground hover:text-foreground transition-colors">About</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" data-testid="button-mobile-menu" onclick="toggleMobileMenu()">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden fixed top-16 left-0 right-0 bg-background border-b border-border transform -translate-x-full transition-transform duration-300">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" data-testid="mobile-nav-home" class="block text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                <a href="how-it-works.html" data-testid="mobile-nav-how-it-works" class="block text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                <a href="plans.html" data-testid="mobile-nav-plans" class="block text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+                <a href="products.html" data-testid="mobile-nav-products" class="block text-primary font-medium">Products</a>
+                <a href="impact.html" data-testid="mobile-nav-impact" class="block text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+                <a href="community.html" data-testid="mobile-nav-community" class="block text-muted-foreground hover:text-foreground transition-colors">Community</a>
+                <a href="blog.html" data-testid="mobile-nav-blog" class="block text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+                <a href="about-contact.html" data-testid="mobile-nav-about" class="block text-muted-foreground hover:text-foreground transition-colors">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16">
+        <div class="py-16 bg-muted/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Growing Systems</h1>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Discover our range of smart urban farming solutions designed for every space and skill level. From compact countertop units to commercial installations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="py-8 bg-muted/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                    <input type="text" id="product-search" data-testid="input-product-search" placeholder="Search products..." class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="filterProducts('all')" data-testid="filter-all" class="filter-btn active bg-primary text-primary-foreground px-6 py-2 rounded-lg font-medium transition-all">All Products</button>
+                    <button onclick="filterProducts('indoor')" data-testid="filter-indoor" class="filter-btn bg-muted text-muted-foreground px-6 py-2 rounded-lg font-medium transition-all hover:bg-card">Indoor Systems</button>
+                    <button onclick="filterProducts('outdoor')" data-testid="filter-outdoor" class="filter-btn bg-muted text-muted-foreground px-6 py-2 rounded-lg font-medium transition-all hover:bg-card">Outdoor Systems</button>
+                    <button onclick="filterProducts('commercial')" data-testid="filter-commercial" class="filter-btn bg-muted text-muted-foreground px-6 py-2 rounded-lg font-medium transition-all hover:bg-card">Commercial</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Countertop Farm -->
+                <div class="product-item bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all" data-category="indoor" data-testid="product-countertop-farm">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*5rPavZB0qpqxt5QXYXA5hw.jpeg" alt="Compact countertop hydroponic system with fresh herbs" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold">Countertop Farm</h3>
+                            <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Popular</span>
+                        </div>
+                        <p class="text-muted-foreground mb-4">Perfect for herbs and leafy greens. Fits any kitchen counter with built-in LED lighting.</p>
+                        <div class="space-y-2 mb-4 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-seedling text-primary w-4"></i>
+                                <span>6 plant capacity</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-ruler-combined text-primary w-4"></i>
+                                <span>12" x 8" footprint</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-lightbulb text-primary w-4"></i>
+                                <span>LED grow lights included</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$199</span>
+                            <button data-testid="button-learn-more-countertop" class="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg transition-all">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tower Garden -->
+                <div class="product-item bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all" data-category="indoor" data-testid="product-tower-garden">
+                    <img src="https://agrotonomy.com/wp-content/uploads/2020/09/tower-garden-aeroponic-basil-4.jpg" alt="Vertical tower garden system with multiple growing levels" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold">Tower Garden Pro</h3>
+                            <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded-full">Best Value</span>
+                        </div>
+                        <p class="text-muted-foreground mb-4">Maximize your growing space with this vertical system. Perfect for families.</p>
+                        <div class="space-y-2 mb-4 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-seedling text-primary w-4"></i>
+                                <span>20 plant capacity</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-ruler-combined text-primary w-4"></i>
+                                <span>18" x 18" x 48" tall</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-thermometer-half text-primary w-4"></i>
+                                <span>Climate control system</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$449</span>
+                            <button data-testid="button-learn-more-tower" class="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg transition-all">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wall Garden -->
+                <div class="product-item bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all" data-category="indoor" data-testid="product-wall-garden">
+                    <img src="https://www.verticalgardening.in/wp-content/uploads/2023/08/Green-Outdoor-Wall-Garden.webp" alt="Wall-mounted vertical garden system with green leafy vegetables" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold">Wall Garden</h3>
+                            <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded-full">Space Saver</span>
+                        </div>
+                        <p class="text-muted-foreground mb-4">Wall-mounted system perfect for apartments and small spaces.</p>
+                        <div class="space-y-2 mb-4 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-seedling text-primary w-4"></i>
+                                <span>12 plant capacity</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-ruler-combined text-primary w-4"></i>
+                                <span>24" x 36" wall mount</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-tools text-primary w-4"></i>
+                                <span>Easy wall installation</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$329</span>
+                            <button data-testid="button-learn-more-wall" class="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg transition-all">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Balcony Garden System -->
+                <div class="product-item bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all" data-category="outdoor" data-testid="product-balcony-garden">
+                    <img src="https://www.asiafarming.com/wp-content/uploads/2023/10/Design-a-Balcony-Garden5.jpg" alt="Organized balcony garden with planters and vegetables" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Balcony Garden System</h3>
+                        <p class="text-muted-foreground mb-4">Weather-resistant outdoor system perfect for balconies and patios.</p>
+                        <div class="space-y-2 mb-4 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-seedling text-primary w-4"></i>
+                                <span>15 plant capacity</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-cloud-rain text-primary w-4"></i>
+                                <span>Weather resistant</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-sun text-primary w-4"></i>
+                                <span>Natural sunlight optimized</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$399</span>
+                            <button data-testid="button-learn-more-balcony" class="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg transition-all">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Greenhouse Kit -->
+                <div class="product-item bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all" data-category="outdoor" data-testid="product-greenhouse">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2020/9/DF/ZH/PO/27136507/smart-greenhouse-solutions-1000x1000.jpeg" alt="Small greenhouse structure with growing plants inside" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Smart Greenhouse Kit</h3>
+                        <p class="text-muted-foreground mb-4">Complete greenhouse solution with climate control for year-round growing.</p>
+                        <div class="space-y-2 mb-4 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-seedling text-primary w-4"></i>
+                                <span>40 plant capacity</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-home text-primary w-4"></i>
+                                <span>6' x 8' greenhouse</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-thermometer-half text-primary w-4"></i>
+                                <span>Automated climate control</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$1,299</span>
+                            <button data-testid="button-learn-more-greenhouse" class="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg transition-all">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial System -->
+                <div class="product-item bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all" data-category="commercial" data-testid="product-commercial">
+                    <img src="https://dakoa.b-cdn.net/wp-content/uploads/2024/02/Commercial-Vertical-Hydroponic-Systems-Tower-Farm-Garden.webp" alt="Large commercial vertical farming setup with multiple growing towers" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold">Commercial Farm Hub</h3>
+                            <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Enterprise</span>
+                        </div>
+                        <p class="text-muted-foreground mb-4">Scalable commercial solution for restaurants, schools, and businesses.</p>
+                        <div class="space-y-2 mb-4 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-seedling text-primary w-4"></i>
+                                <span>100+ plant capacity</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-chart-line text-primary w-4"></i>
+                                <span>Business analytics dashboard</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-cog text-primary w-4"></i>
+                                <span>Professional installation</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg text-muted-foreground">Custom Pricing</span>
+                            <button data-testid="button-contact-commercial" class="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg transition-all">
+                                Contact Sales
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Accessories & Add-ons</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Enhance your growing experience with our premium accessories and upgrade kits.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-card rounded-xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-seedling text-4xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Seed Pod Variety Pack</h3>
+                    <p class="text-muted-foreground text-sm mb-4">20 different herb and vegetable varieties to try</p>
+                    <div class="text-xl font-bold text-primary mb-2">$29</div>
+                    <button class="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 rounded-lg text-sm transition-all">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="bg-card rounded-xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-flask text-4xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Nutrient Solution</h3>
+                    <p class="text-muted-foreground text-sm mb-4">Premium organic nutrients for optimal growth</p>
+                    <div class="text-xl font-bold text-primary mb-2">$19</div>
+                    <button class="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 rounded-lg text-sm transition-all">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="bg-card rounded-xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-thermometer-half text-4xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Smart Sensors Kit</h3>
+                    <p class="text-muted-foreground text-sm mb-4">pH, EC, and temperature monitoring upgrade</p>
+                    <div class="text-xl font-bold text-primary mb-2">$79</div>
+                    <button class="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 rounded-lg text-sm transition-all">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="bg-card rounded-xl border border-border p-6 text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-lightbulb text-4xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">LED Upgrade Kit</h3>
+                    <p class="text-muted-foreground text-sm mb-4">High-intensity LEDs for faster growth</p>
+                    <div class="text-xl font-bold text-primary mb-2">$99</div>
+                    <button class="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 rounded-lg text-sm transition-all">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Comparison -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Compare Products</h2>
+                <p class="text-xl text-muted-foreground">Find the perfect system for your needs with our detailed comparison.</p>
+            </div>
+
+            <div class="bg-card rounded-2xl border border-border overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-muted/30">
+                            <tr>
+                                <th class="text-left p-4 font-semibold">Feature</th>
+                                <th class="text-center p-4 font-semibold">Countertop</th>
+                                <th class="text-center p-4 font-semibold">Tower Pro</th>
+                                <th class="text-center p-4 font-semibold">Wall Garden</th>
+                                <th class="text-center p-4 font-semibold">Balcony</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t border-border">
+                                <td class="p-4">Plant Capacity</td>
+                                <td class="p-4 text-center">6</td>
+                                <td class="p-4 text-center">20</td>
+                                <td class="p-4 text-center">12</td>
+                                <td class="p-4 text-center">15</td>
+                            </tr>
+                            <tr class="border-t border-border">
+                                <td class="p-4">Space Required</td>
+                                <td class="p-4 text-center">Countertop</td>
+                                <td class="p-4 text-center">Floor</td>
+                                <td class="p-4 text-center">Wall</td>
+                                <td class="p-4 text-center">Outdoor</td>
+                            </tr>
+                            <tr class="border-t border-border">
+                                <td class="p-4">LED Lighting</td>
+                                <td class="p-4 text-center"><i class="fas fa-check text-primary"></i></td>
+                                <td class="p-4 text-center"><i class="fas fa-check text-primary"></i></td>
+                                <td class="p-4 text-center"><i class="fas fa-check text-primary"></i></td>
+                                <td class="p-4 text-center">Optional</td>
+                            </tr>
+                            <tr class="border-t border-border">
+                                <td class="p-4">Mobile App</td>
+                                <td class="p-4 text-center"><i class="fas fa-check text-primary"></i></td>
+                                <td class="p-4 text-center"><i class="fas fa-check text-primary"></i></td>
+                                <td class="p-4 text-center"><i class="fas fa-check text-primary"></i></td>
+                                <td class="p-4 text-center"><i class="fas fa-check text-primary"></i></td>
+                            </tr>
+                            <tr class="border-t border-border">
+                                <td class="p-4">Climate Control</td>
+                                <td class="p-4 text-center">Basic</td>
+                                <td class="p-4 text-center">Advanced</td>
+                                <td class="p-4 text-center">Basic</td>
+                                <td class="p-4 text-center">Weather Resistant</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Ready to Start Growing?</h2>
+            <p class="text-xl text-muted-foreground mb-8">Choose your perfect growing system and start your urban farming journey today.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="plans.html" class="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    View Plans
+                </a>
+                <a href="about-contact.html" class="border border-border hover:bg-muted text-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    Get Expert Advice
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!--footer class="bg-card border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="font-bold text-xl">FarmUrban</span>
+                    </div>
+                    <p class="text-muted-foreground mb-4">Growing fresh food in urban spaces through smart technology and community support.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" data-testid="footer-twitter" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" data-testid="footer-facebook" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" data-testid="footer-linkedin" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" data-testid="footer-instagram" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Products</h4>
+                    <div class="space-y-2">
+                        <a href="products.html" data-testid="footer-indoor-systems" class="block text-muted-foreground hover:text-primary transition-colors">Indoor Systems</a>
+                        <a href="products.html" data-testid="footer-outdoor-systems" class="block text-muted-foreground hover:text-primary transition-colors">Outdoor Systems</a>
+                        <a href="products.html" data-testid="footer-commercial-solutions" class="block text-muted-foreground hover:text-primary transition-colors">Commercial Solutions</a>
+                        <a href="products.html" data-testid="footer-accessories" class="block text-muted-foreground hover:text-primary transition-colors">Accessories</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <div class="space-y-2">
+                        <a href="how-it-works.html" data-testid="footer-how-it-works" class="block text-muted-foreground hover:text-primary transition-colors">How it Works</a>
+                        <a href="blog.html" data-testid="footer-learning-hub" class="block text-muted-foreground hover:text-primary transition-colors">Learning Hub</a>
+                        <a href="community.html" data-testid="footer-community" class="block text-muted-foreground hover:text-primary transition-colors">Community</a>
+                        <a href="about-contact.html" data-testid="footer-contact-support" class="block text-muted-foreground hover:text-primary transition-colors">Contact Support</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <div class="space-y-2">
+                        <a href="about-contact.html" data-testid="footer-about-us" class="block text-muted-foreground hover:text-primary transition-colors">About Us</a>
+                        <a href="impact.html" data-testid="footer-environmental-impact" class="block text-muted-foreground hover:text-primary transition-colors">Environmental Impact</a>
+                        <a href="#" data-testid="footer-careers" class="block text-muted-foreground hover:text-primary transition-colors">Careers</a>
+                        <a href="#" data-testid="footer-privacy-policy" class="block text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-border mt-8 pt-8 text-center">
+                <p class="text-muted-foreground" data-testid="text-copyright">&copy; 2024 FarmUrban. All rights reserved.</p>
+            </div>
+        </div>
+    </footer-->
+
+
+<!-- Footer -->
+<footer class="bg-footer text-footer-foreground border-t border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <svg class="h-8 w-8 text-footer-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span class="font-bold text-xl">FarmUrban</span>
+                </div>
+                <p class="text-footer-muted mb-4">Growing fresh food in urban spaces through smart technology and community support.</p>
+                <div class="flex space-x-4">
+                    <a href="#" data-testid="footer-twitter" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" data-testid="footer-facebook" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" data-testid="footer-linkedin" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" data-testid="footer-instagram" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Products</h4>
+                <div class="space-y-2">
+                    <a href="products.html" data-testid="footer-indoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Indoor Systems</a>
+                    <a href="products.html" data-testid="footer-outdoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Outdoor Systems</a>
+                    <a href="products.html" data-testid="footer-commercial-solutions" class="block text-footer-muted hover:text-footer-link transition-colors">Commercial Solutions</a>
+                    <a href="products.html" data-testid="footer-accessories" class="block text-footer-muted hover:text-footer-link transition-colors">Accessories</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Support</h4>
+                <div class="space-y-2">
+                    <a href="how-it-works.html" data-testid="footer-how-it-works" class="block text-footer-muted hover:text-footer-link transition-colors">How it Works</a>
+                    <a href="blog.html" data-testid="footer-learning-hub" class="block text-footer-muted hover:text-footer-link transition-colors">Learning Hub</a>
+                    <a href="community.html" data-testid="footer-community" class="block text-footer-muted hover:text-footer-link transition-colors">Community</a>
+                    <a href="about-contact.html" data-testid="footer-contact-support" class="block text-footer-muted hover:text-footer-link transition-colors">Contact Support</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Company</h4>
+                <div class="space-y-2">
+                    <a href="about-contact.html" data-testid="footer-about-us" class="block text-footer-muted hover:text-footer-link transition-colors">About Us</a>
+                    <a href="impact.html" data-testid="footer-environmental-impact" class="block text-footer-muted hover:text-footer-link transition-colors">Environmental Impact</a>
+                    <a href="#" data-testid="footer-careers" class="block text-footer-muted hover:text-footer-link transition-colors">Careers</a>
+                    <a href="#" data-testid="footer-privacy-policy" class="block text-footer-muted hover:text-footer-link transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-footer-divider mt-8 pt-8 text-center">
+            <p class="text-footer-muted" data-testid="text-copyright">&copy; 2024 FarmUrban. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="src/main.js"></script>
+
+</body> </html>

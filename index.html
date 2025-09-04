@@ -1,0 +1,232 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>FarmUrban - Urban Farming as a Service | Fresh Food, Smart Technology</title> <meta name="description" content="Transform any space into a sustainable growing environment with FarmUrban's smart urban farming solutions. Grow fresh herbs, vegetables, and greens with 95% less water and zero pesticides.">
+
+<!-- Open Graph tags -->
+<meta property="og:title" content="FarmUrban - Urban Farming as a Service">
+<meta property="og:description" content="Smart urban farming solutions for fresh, sustainable food production in any space.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://farmurban.com">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="src/index.css">
+
+
+</head> <body class="bg-background text-foreground font-sans antialiased"> <!-- Navigation --> <nav class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <div class="flex items-center"> <a href="index.html" class="flex items-center"> <svg class="h-8 w-8 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/> </svg> <span class="font-bold text-xl text-foreground">FarmUrban</span> </a> </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" data-testid="nav-home" class="nav-link text-primary font-medium">Home</a>
+                <a href="how-it-works.html" data-testid="nav-how-it-works" class="nav-link text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                <a href="plans.html" data-testid="nav-plans" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+                <a href="products.html" data-testid="nav-products" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Products</a>
+                <a href="impact.html" data-testid="nav-impact" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+                <a href="community.html" data-testid="nav-community" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Community</a>
+                <a href="blog.html" data-testid="nav-blog" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+                <a href="about-contact.html" data-testid="nav-about" class="nav-link text-muted-foreground hover:text-foreground transition-colors">About</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden" data-testid="button-mobile-menu" onclick="toggleMobileMenu()">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden fixed top-16 left-0 right-0 bg-background border-b border-border transform -translate-x-full transition-transform duration-300">
+        <div class="px-4 py-6 space-y-4">
+            <a href="index.html" data-testid="mobile-nav-home" class="block text-primary font-medium">Home</a>
+            <a href="how-it-works.html" data-testid="mobile-nav-how-it-works" class="block text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+            <a href="plans.html" data-testid="mobile-nav-plans" class="block text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+            <a href="products.html" data-testid="mobile-nav-products" class="block text-muted-foreground hover:text-foreground transition-colors">Products</a>
+            <a href="impact.html" data-testid="mobile-nav-impact" class="block text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+            <a href="community.html" data-testid="mobile-nav-community" class="block text-muted-foreground hover:text-foreground transition-colors">Community</a>
+            <a href="blog.html" data-testid="mobile-nav-blog" class="block text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+            <a href="about-contact.html" data-testid="mobile-nav-about" class="block text-muted-foreground hover:text-foreground transition-colors">About</a>
+        </div>
+    </div>
+</nav>
+<!-- Home Section -->
+<section class="pt-16">
+    <!-- Hero Section -->
+    <div class="hero-gradient min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold text-foreground mb-6">
+                        Farm Fresh, <br/>
+                        <span class="text-primary">Without the Farm</span>
+                    </h1>
+                    <p class="text-xl text-muted-foreground mb-8 max-w-2xl">
+                        Grow leafy greens, herbs, and more with smart, compact systems designed for modern spaces. Transform any space into a sustainable growing environment with our innovative urban farming solutions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="plans.html" data-testid="button-start-growing" class="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-all transform hover:scale-105 inline-block text-center">
+                            Start Growing Today
+                        </a>
+                        <a href="how-it-works.html" data-testid="button-learn-how" class="border border-border hover:bg-muted text-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block text-center">
+                            Learn How it Works
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://foodtank.com/wp-content/uploads/2019/12/Urban-Ag-List.jpg" alt="Modern vertical hydroponic system" class="rounded-2xl shadow-2xl w-full h-auto"/>
+                    <div class="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-4 shadow-lg">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                            <span class="text-sm font-medium" data-testid="text-growing-status">Growing Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Overview -->
+    <div class="py-16 bg-muted/50 features-darken">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose FarmUrban?</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Transform your space into a sustainable growing environment with our intelligent urban farming solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-card card-darker rounded-xl border border-border hover:shadow-lg transition-all">
+                    <i class="fas fa-bolt text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Smart Technology</h3>
+                    <p class="text-muted-foreground">AI-powered growing systems that optimize light, water, and nutrients automatically for maximum plant health.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-card card-darker rounded-xl border border-border hover:shadow-lg transition-all">
+                    <i class="fas fa-heart text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Sustainable Impact</h3>
+                    <p class="text-muted-foreground">Use 95% less water and produce zero agricultural runoff while growing fresh, nutritious food.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-card card-darker rounded-xl border border-border hover:shadow-lg transition-all">
+                    <i class="fas fa-users text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Expert Support</h3>
+                    <p class="text-muted-foreground">Join a thriving community of growers with 24/7 support and personalized growing guidance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quick Stats -->
+    <div class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Growing Impact Worldwide</h2>
+                <p class="text-xl text-muted-foreground">Join thousands of urban farmers making a positive impact on their communities and environment</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-primary counter" data-target="10000" data-testid="counter-growers">0</div>
+                    <div class="text-muted-foreground mt-2">Active Growers</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-primary counter" data-target="95" data-testid="counter-water-saved">0</div>
+                    <div class="text-muted-foreground mt-2">% Water Saved</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-primary counter" data-target="50000" data-testid="counter-co2-offset">0</div>
+                    <div class="text-muted-foreground mt-2">lbs CO₂ Offset</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-primary counter" data-target="365" data-testid="counter-growing-days">0</div>
+                    <div class="text-muted-foreground mt-2">Days Growing</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action Section -->
+    <div class="py-16 bg-primary/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Ready to Start Growing?</h2>
+            <p class="text-xl text-muted-foreground mb-8">Join the urban farming revolution and start growing fresh, healthy food in your own space today.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="plans.html" class="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    View Our Plans
+                </a>
+                <a href="products.html" class="border border-border hover:bg-muted text-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    Browse Products
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-footer text-footer-foreground border-t border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <svg class="h-8 w-8 text-footer-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span class="font-bold text-xl">FarmUrban</span>
+                </div>
+                <p class="text-footer-muted mb-4">Growing fresh food in urban spaces through smart technology and community support.</p>
+                <div class="flex space-x-4">
+                    <a href="#" data-testid="footer-twitter" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" data-testid="footer-facebook" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" data-testid="footer-linkedin" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" data-testid="footer-instagram" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Products</h4>
+                <div class="space-y-2">
+                    <a href="products.html" data-testid="footer-indoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Indoor Systems</a>
+                    <a href="products.html" data-testid="footer-outdoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Outdoor Systems</a>
+                    <a href="products.html" data-testid="footer-commercial-solutions" class="block text-footer-muted hover:text-footer-link transition-colors">Commercial Solutions</a>
+                    <a href="products.html" data-testid="footer-accessories" class="block text-footer-muted hover:text-footer-link transition-colors">Accessories</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Support</h4>
+                <div class="space-y-2">
+                    <a href="how-it-works.html" data-testid="footer-how-it-works" class="block text-footer-muted hover:text-footer-link transition-colors">How it Works</a>
+                    <a href="blog.html" data-testid="footer-learning-hub" class="block text-footer-muted hover:text-footer-link transition-colors">Learning Hub</a>
+                    <a href="community.html" data-testid="footer-community" class="block text-footer-muted hover:text-footer-link transition-colors">Community</a>
+                    <a href="about-contact.html" data-testid="footer-contact-support" class="block text-footer-muted hover:text-footer-link transition-colors">Contact Support</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Company</h4>
+                <div class="space-y-2">
+                    <a href="about-contact.html" data-testid="footer-about-us" class="block text-footer-muted hover:text-footer-link transition-colors">About Us</a>
+                    <a href="impact.html" data-testid="footer-environmental-impact" class="block text-footer-muted hover:text-footer-link transition-colors">Environmental Impact</a>
+                    <a href="#" data-testid="footer-careers" class="block text-footer-muted hover:text-footer-link transition-colors">Careers</a>
+                    <a href="#" data-testid="footer-privacy-policy" class="block text-footer-muted hover:text-footer-link transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-footer-divider mt-8 pt-8 text-center">
+            <p class="text-footer-muted" data-testid="text-copyright">&copy; 2024 FarmUrban. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="src/main.js"></script>
+
+</body> </html>

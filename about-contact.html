@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us & Contact | FarmUrban Team & Support</title>
+    <meta name="description" content="Learn about FarmUrban's mission to democratize urban farming. Meet our team and get in touch for support, partnerships, or questions about our growing systems.">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="About Us & Contact | FarmUrban">
+    <meta property="og:description" content="Meet the FarmUrban team and learn about our mission to transform urban food production.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/index.css">
+</head>
+
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <svg class="h-8 w-8 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="font-bold text-xl text-foreground">FarmUrban</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" data-testid="nav-home" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                    <a href="how-it-works.html" data-testid="nav-how-it-works" class="nav-link text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                    <a href="plans.html" data-testid="nav-plans" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+                    <a href="products.html" data-testid="nav-products" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Products</a>
+                    <a href="impact.html" data-testid="nav-impact" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+                    <a href="community.html" data-testid="nav-community" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Community</a>
+                    <a href="blog.html" data-testid="nav-blog" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+                    <a href="about-contact.html" data-testid="nav-about" class="nav-link text-primary font-medium">About</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" data-testid="button-mobile-menu" onclick="toggleMobileMenu()">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden fixed top-16 left-0 right-0 bg-background border-b border-border transform -translate-x-full transition-transform duration-300">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" data-testid="mobile-nav-home" class="block text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                <a href="how-it-works.html" data-testid="mobile-nav-how-it-works" class="block text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                <a href="plans.html" data-testid="mobile-nav-plans" class="block text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+                <a href="products.html" data-testid="mobile-nav-products" class="block text-muted-foreground hover:text-foreground transition-colors">Products</a>
+                <a href="impact.html" data-testid="mobile-nav-impact" class="block text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+                <a href="community.html" data-testid="mobile-nav-community" class="block text-muted-foreground hover:text-foreground transition-colors">Community</a>
+                <a href="blog.html" data-testid="mobile-nav-blog" class="block text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+                <a href="about-contact.html" data-testid="mobile-nav-about" class="block text-primary font-medium">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16">
+        <div class="py-16 bg-muted/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-6">About FarmUrban</h1>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">We're on a mission to democratize fresh food production and create sustainable communities through urban farming technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Team working on vertical farming technology" class="rounded-xl shadow-lg w-full h-auto"/>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Mission</h2>
+                    <p class="text-lg text-muted-foreground mb-6">
+                        We believe everyone should have access to fresh, nutritious food regardless of where they live. Our technology makes urban farming accessible, affordable, and sustainable for individuals, businesses, and communities.
+                    </p>
+                    <p class="text-lg text-muted-foreground mb-8">
+                        Founded in 2020, we've helped thousands of people grow their own food using smart, space-efficient systems that require no soil and use minimal water. Our vision is a world where every urban space can contribute to local food security and environmental sustainability.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-lg">Sustainable food production for everyone</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-lg">Building resilient urban communities</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-lg">Advancing agricultural technology innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Story</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">From a small startup to a global movement transforming how cities grow food</p>
+            </div>
+
+            <div class="space-y-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="text-primary font-semibold mb-2">2020 - The Beginning</div>
+                        <h3 class="text-2xl font-bold mb-4">A Problem Worth Solving</h3>
+                        <p class="text-muted-foreground">
+                            Living in a small San Francisco apartment, our founder Raj Verma struggled to find fresh, affordable produce. Traditional urban farming solutions were expensive, complicated, or required significant space. This frustration sparked the idea for FarmUrban - making urban farming accessible to everyone.
+                        </p>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="bg-card rounded-xl p-6 border border-border">
+                            <i class="fas fa-lightbulb text-4xl text-primary mb-4"></i>
+                            <div class="text-lg font-semibold">The Spark</div>
+                            <div class="text-sm text-muted-foreground">An idea born from personal need</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-card rounded-xl p-6 border border-border">
+                        <i class="fas fa-users text-4xl text-primary mb-4"></i>
+                        <div class="text-lg font-semibold">Building the Team</div>
+                        <div class="text-sm text-muted-foreground">Experts in agriculture and technology</div>
+                    </div>
+                    <div>
+                        <div class="text-primary font-semibold mb-2">2021 - Growing the Team</div>
+                        <h3 class="text-2xl font-bold mb-4">Bringing Expertise Together</h3>
+                        <p class="text-muted-foreground">
+                            We assembled a world-class team of agricultural engineers, IoT specialists, and sustainability experts. Together, we developed our first smart growing system, focusing on simplicity, efficiency, and sustainability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="text-primary font-semibold mb-2">2022 - Launch</div>
+                        <h3 class="text-2xl font-bold mb-4">First Products in the Wild</h3>
+                        <p class="text-muted-foreground">
+                            Our first 1000 customers started growing fresh herbs and vegetables in their homes. The positive feedback and success stories motivated us to expand our product line and improve our technology.
+                        </p>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="bg-card rounded-xl p-6 border border-border">
+                            <i class="fas fa-rocket text-4xl text-primary mb-4"></i>
+                            <div class="text-lg font-semibold">Product Launch</div>
+                            <div class="text-sm text-muted-foreground">1000 happy customers</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-card rounded-xl p-6 border border-border">
+                        <i class="fas fa-globe text-4xl text-primary mb-4"></i>
+                        <div class="text-lg font-semibold">Global Expansion</div>
+                        <div class="text-sm text-muted-foreground">Serving 50 cities worldwide</div>
+                    </div>
+                    <div>
+                        <div class="text-primary font-semibold mb-2">2024 - Global Impact</div>
+                        <h3 class="text-2xl font-bold mb-4">Scaling Our Mission</h3>
+                        <p class="text-muted-foreground">
+                            Today, FarmUrban serves over 10,000 urban farmers across 50 cities worldwide. We've saved millions of gallons of water, reduced thousands of pounds of CO₂ emissions, and helped communities grow fresh, healthy food locally.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Team</h2>
+                <p class="text-xl text-muted-foreground">The passionate individuals driving the urban farming revolution</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center bg-card rounded-2xl border border-border p-8" data-testid="team-member-raj">
+                    <div class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-primary">RV</span>
+                    </div>
+                    <h4 class="font-bold text-lg">Raj Verma</h4>
+                    <p class="text-primary mb-4">CEO & Founder</p>
+                    <p class="text-sm text-muted-foreground">
+                        Former agricultural engineer with 15 years in sustainable farming technology. Led development teams at John Deere and holds 12 patents in precision agriculture.
+                    </p>
+                </div>
+                
+                <div class="text-center bg-card rounded-2xl border border-border p-8" data-testid="team-member-sophia">
+                    <div class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-primary">SP</span>
+                    </div>
+                    <h4 class="font-bold text-lg">Sophia Park</h4>
+                    <p class="text-primary mb-4">CTO</p>
+                    <p class="text-sm text-muted-foreground">
+                        AI and IoT specialist with PhD in Computer Science from Stanford. Previously led smart city initiatives at Google and IBM, focused on creating intelligent growing systems.
+                    </p>
+                </div>
+                
+                <div class="text-center bg-card rounded-2xl border border-border p-8" data-testid="team-member-alex">
+                    <div class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-primary">AC</span>
+                    </div>
+                    <h4 class="font-bold text-lg">Alex Chen</h4>
+                    <p class="text-primary mb-4">Head of Community</p>
+                    <p class="text-sm text-muted-foreground">
+                        Community builder with background in urban planning and social impact. Former Peace Corps volunteer and expert in creating educational resources for sustainable living.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Extended Team -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-card rounded-xl border border-border p-4">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-lg font-bold text-primary">MR</span>
+                    </div>
+                    <h5 class="font-semibold text-sm">Dr. Maria Rodriguez</h5>
+                    <p class="text-xs text-muted-foreground">Plant Scientist</p>
+                </div>
+                
+                <div class="bg-card rounded-xl border border-border p-4">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-lg font-bold text-primary">TK</span>
+                    </div>
+                    <h5 class="font-semibold text-sm">Tom Kim</h5>
+                    <p class="text-xs text-muted-foreground">Hardware Engineer</p>
+                </div>
+                
+                <div class="bg-card rounded-xl border border-border p-4">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-lg font-bold text-primary">LM</span>
+                    </div>
+                    <h5 class="font-semibold text-sm">Lisa Murphy</h5>
+                    <p class="text-xs text-muted-foreground">Sustainability Lead</p>
+                </div>
+                
+                <div class="bg-card rounded-xl border border-border p-4">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-lg font-bold text-primary">DS</span>
+                    </div>
+                    <h5 class="font-semibold text-sm">David Singh</h5>
+                    <p class="text-xs text-muted-foreground">Operations Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Values -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Values</h2>
+                <p class="text-xl text-muted-foreground">The principles that guide everything we do</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-2xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Sustainability First</h4>
+                    <p class="text-muted-foreground">Environmental stewardship drives every decision we make. We're building technology that heals the planet while feeding communities.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-2xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Community Focused</h4>
+                    <p class="text-muted-foreground">Building connections through shared growing experiences. We believe in the power of community to create lasting change.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-2xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Innovation Excellence</h4>
+                    <p class="text-muted-foreground">Pushing the boundaries of what's possible in urban agriculture through cutting-edge technology and creative problem-solving.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Get in Touch</h2>
+                <p class="text-xl text-muted-foreground">Ready to start your urban farming journey? We're here to help you every step of the way.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-envelope text-primary mt-1"></i>
+                            <div>
+                                <div class="font-medium">Email</div>
+                                <div class="text-muted-foreground" data-testid="text-email">hello@farmurban.com</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-phone text-primary mt-1"></i>
+                            <div>
+                                <div class="font-medium">Phone</div>
+                                <div class="text-muted-foreground" data-testid="text-phone">+1 (555) 123-4567</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <div>
+                                <div class="font-medium">Address</div>
+                                <div class="text-muted-foreground" data-testid="text-address">123 Green Tech Avenue<br/>San Francisco, CA 94102</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-clock text-primary mt-1"></i>
+                            <div>
+                                <div class="font-medium">Support Hours</div>
+                                <div class="text-muted-foreground">Monday - Friday: 8AM - 6PM PST<br/>Weekend: 10AM - 4PM PST</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" data-testid="link-twitter" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" data-testid="link-facebook" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" data-testid="link-linkedin" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" data-testid="link-instagram" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-card rounded-2xl border border-border p-8">
+                    <form id="contact-form" data-testid="form-contact" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-foreground mb-2">First Name</label>
+                                <input type="text" data-testid="input-first-name" class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="John" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-foreground mb-2">Last Name</label>
+                                <input type="text" data-testid="input-last-name" class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Email</label>
+                            <input type="email" data-testid="input-email" class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Subject</label>
+                            <select data-testid="select-subject" class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Product Support</option>
+                                <option value="business">Business Partnership</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="careers">Career Opportunities</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Message</label>
+                            <textarea rows="4" data-testid="textarea-message" class="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Tell us about your urban farming goals..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" data-testid="button-send-message" class="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 rounded-lg font-medium transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-muted-foreground">Quick answers to common questions</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-card rounded-lg border border-border p-6">
+                    <h3 class="text-lg font-semibold mb-2">How do I get started with FarmUrban?</h3>
+                    <p class="text-muted-foreground">Simply choose a plan that fits your space and needs, and we'll ship your system with everything included. Setup takes about 15 minutes, and you'll be growing within days.</p>
+                </div>
+                
+                <div class="bg-card rounded-lg border border-border p-6">
+                    <h3 class="text-lg font-semibold mb-2">What kind of support do you offer?</h3>
+                    <p class="text-muted-foreground">We provide 24/7 customer support, comprehensive growing guides, video tutorials, and access to our community forum. Our expert team is always available to help you succeed.</p>
+                </div>
+                
+                <div class="bg-card rounded-lg border border-border p-6">
+                    <h3 class="text-lg font-semibold mb-2">Do you offer business partnerships?</h3>
+                    <p class="text-muted-foreground">Yes! We work with restaurants, schools, offices, and other organizations to implement custom urban farming solutions. Contact our business team to discuss your needs.</p>
+                </div>
+                
+                <div class="bg-card rounded-lg border border-border p-6">
+                    <h3 class="text-lg font-semibold mb-2">Can I visit your facilities?</h3>
+                    <p class="text-muted-foreground">We offer tours of our San Francisco headquarters and demo garden by appointment. Contact us to schedule a visit and see our technology in action.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Ready to Transform Your Space?</h2>
+            <p class="text-xl text-muted-foreground mb-8">Join thousands of urban farmers growing fresh, healthy food with FarmUrban. Start your journey today.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="plans.html" class="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    View Plans & Pricing
+                </a>
+                <a href="how-it-works.html" class="border border-border hover:bg-muted text-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    Learn How it Works
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <!--footer class="bg-card border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="font-bold text-xl">FarmUrban</span>
+                    </div>
+                    <p class="text-muted-foreground mb-4">Growing fresh food in urban spaces through smart technology and community support.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" data-testid="footer-twitter" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" data-testid="footer-facebook" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" data-testid="footer-linkedin" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" data-testid="footer-instagram" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Products</h4>
+                    <div class="space-y-2">
+                        <a href="products.html" data-testid="footer-indoor-systems" class="block text-muted-foreground hover:text-primary transition-colors">Indoor Systems</a>
+                        <a href="products.html" data-testid="footer-outdoor-systems" class="block text-muted-foreground hover:text-primary transition-colors">Outdoor Systems</a>
+                        <a href="products.html" data-testid="footer-commercial-solutions" class="block text-muted-foreground hover:text-primary transition-colors">Commercial Solutions</a>
+                        <a href="products.html" data-testid="footer-accessories" class="block text-muted-foreground hover:text-primary transition-colors">Accessories</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <div class="space-y-2">
+                        <a href="how-it-works.html" data-testid="footer-how-it-works" class="block text-muted-foreground hover:text-primary transition-colors">How it Works</a>
+                        <a href="blog.html" data-testid="footer-learning-hub" class="block text-muted-foreground hover:text-primary transition-colors">Learning Hub</a>
+                        <a href="community.html" data-testid="footer-community" class="block text-muted-foreground hover:text-primary transition-colors">Community</a>
+                        <a href="about-contact.html" data-testid="footer-contact-support" class="block text-muted-foreground hover:text-primary transition-colors">Contact Support</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <div class="space-y-2">
+                        <a href="about-contact.html" data-testid="footer-about-us" class="block text-muted-foreground hover:text-primary transition-colors">About Us</a>
+                        <a href="impact.html" data-testid="footer-environmental-impact" class="block text-muted-foreground hover:text-primary transition-colors">Environmental Impact</a>
+                        <a href="#" data-testid="footer-careers" class="block text-muted-foreground hover:text-primary transition-colors">Careers</a>
+                        <a href="#" data-testid="footer-privacy-policy" class="block text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-border mt-8 pt-8 text-center">
+                <p class="text-muted-foreground" data-testid="text-copyright">&copy; 2024 FarmUrban. All rights reserved.</p>
+            </div>
+        </div>
+    </footer-->
+
+<!-- Footer -->
+<footer class="bg-footer text-footer-foreground border-t border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <svg class="h-8 w-8 text-footer-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span class="font-bold text-xl">FarmUrban</span>
+                </div>
+                <p class="text-footer-muted mb-4">Growing fresh food in urban spaces through smart technology and community support.</p>
+                <div class="flex space-x-4">
+                    <a href="#" data-testid="footer-twitter" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" data-testid="footer-facebook" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" data-testid="footer-linkedin" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" data-testid="footer-instagram" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Products</h4>
+                <div class="space-y-2">
+                    <a href="products.html" data-testid="footer-indoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Indoor Systems</a>
+                    <a href="products.html" data-testid="footer-outdoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Outdoor Systems</a>
+                    <a href="products.html" data-testid="footer-commercial-solutions" class="block text-footer-muted hover:text-footer-link transition-colors">Commercial Solutions</a>
+                    <a href="products.html" data-testid="footer-accessories" class="block text-footer-muted hover:text-footer-link transition-colors">Accessories</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Support</h4>
+                <div class="space-y-2">
+                    <a href="how-it-works.html" data-testid="footer-how-it-works" class="block text-footer-muted hover:text-footer-link transition-colors">How it Works</a>
+                    <a href="blog.html" data-testid="footer-learning-hub" class="block text-footer-muted hover:text-footer-link transition-colors">Learning Hub</a>
+                    <a href="community.html" data-testid="footer-community" class="block text-footer-muted hover:text-footer-link transition-colors">Community</a>
+                    <a href="about-contact.html" data-testid="footer-contact-support" class="block text-footer-muted hover:text-footer-link transition-colors">Contact Support</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Company</h4>
+                <div class="space-y-2">
+                    <a href="about-contact.html" data-testid="footer-about-us" class="block text-footer-muted hover:text-footer-link transition-colors">About Us</a>
+                    <a href="impact.html" data-testid="footer-environmental-impact" class="block text-footer-muted hover:text-footer-link transition-colors">Environmental Impact</a>
+                    <a href="#" data-testid="footer-careers" class="block text-footer-muted hover:text-footer-link transition-colors">Careers</a>
+                    <a href="#" data-testid="footer-privacy-policy" class="block text-footer-muted hover:text-footer-link transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-footer-divider mt-8 pt-8 text-center">
+            <p class="text-footer-muted" data-testid="text-copyright">&copy; 2024 FarmUrban. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="src/main.js"></script>
+
+</body> </html>

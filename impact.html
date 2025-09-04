@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Impact | FarmUrban Sustainable Growing</title>
+    <meta name="description" content="Discover FarmUrban's environmental impact. Learn how urban farming saves water, reduces carbon footprint, and creates sustainable food systems in cities.">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Environmental Impact | FarmUrban">
+    <meta property="og:description" content="See how urban farming transforms communities and reduces environmental impact worldwide.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/index.css">
+</head>
+
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <svg class="h-8 w-8 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="font-bold text-xl text-foreground">FarmUrban</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" data-testid="nav-home" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                    <a href="how-it-works.html" data-testid="nav-how-it-works" class="nav-link text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                    <a href="plans.html" data-testid="nav-plans" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+                    <a href="products.html" data-testid="nav-products" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Products</a>
+                    <a href="impact.html" data-testid="nav-impact" class="nav-link text-primary font-medium">Impact</a>
+                    <a href="community.html" data-testid="nav-community" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Community</a>
+                    <a href="blog.html" data-testid="nav-blog" class="nav-link text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+                    <a href="about-contact.html" data-testid="nav-about" class="nav-link text-muted-foreground hover:text-foreground transition-colors">About</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" data-testid="button-mobile-menu" onclick="toggleMobileMenu()">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden fixed top-16 left-0 right-0 bg-background border-b border-border transform -translate-x-full transition-transform duration-300">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" data-testid="mobile-nav-home" class="block text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                <a href="how-it-works.html" data-testid="mobile-nav-how-it-works" class="block text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                <a href="plans.html" data-testid="mobile-nav-plans" class="block text-muted-foreground hover:text-foreground transition-colors">Plans</a>
+                <a href="products.html" data-testid="mobile-nav-products" class="block text-muted-foreground hover:text-foreground transition-colors">Products</a>
+                <a href="impact.html" data-testid="mobile-nav-impact" class="block text-primary font-medium">Impact</a>
+                <a href="community.html" data-testid="mobile-nav-community" class="block text-muted-foreground hover:text-foreground transition-colors">Community</a>
+                <a href="blog.html" data-testid="mobile-nav-blog" class="block text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+                <a href="about-contact.html" data-testid="mobile-nav-about" class="block text-muted-foreground hover:text-foreground transition-colors">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16">
+        <div class="py-16 bg-muted/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Environmental Impact</h1>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">See how urban farming is transforming communities and reducing environmental impact worldwide. Every garden makes a difference.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Overview -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Sustainable farming practices and water conservation" class="rounded-xl shadow-lg w-full h-auto"/>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-foreground">Sustainable Growing for a Better Future</h2>
+                    <p class="text-lg text-muted-foreground mb-8">Urban farming represents a fundamental shift towards sustainable food production. By growing food where people live, we're creating resilient communities while dramatically reducing environmental impact.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 rounded-lg p-3">
+                                <i class="fas fa-tint text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">95% Less Water Usage</h4>
+                                <p class="text-muted-foreground">Our hydroponic systems use precise water delivery, eliminating waste and runoff. This represents a 95% reduction compared to traditional farming methods.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 rounded-lg p-3">
+                                <i class="fas fa-leaf text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Zero Pesticides</h4>
+                                <p class="text-muted-foreground">Controlled environment eliminates the need for harmful chemicals and pesticides, resulting in cleaner produce and healthier ecosystems.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 rounded-lg p-3">
+                                <i class="fas fa-globe text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Reduced Carbon Footprint</h4>
+                                <p class="text-muted-foreground">Local growing reduces transportation emissions by up to 80% and supports community resilience through distributed food production.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Impact Statistics -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Global Impact</h2>
+                <p class="text-xl text-muted-foreground">Real numbers showing the positive environmental change we're creating together</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="bg-card rounded-2xl border border-border p-8 text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-primary counter" data-target="2500000" data-testid="counter-water-gallons">0</div>
+                    <div class="text-muted-foreground mt-2">Gallons Water Saved</div>
+                    <p class="text-sm text-muted-foreground mt-2">Equivalent to 50 Olympic pools</p>
+                </div>
+                <div class="bg-card rounded-2xl border border-border p-8 text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-primary counter" data-target="125000" data-testid="counter-co2-reduced">0</div>
+                    <div class="text-muted-foreground mt-2">lbs CO₂ Reduced</div>
+                    <p class="text-sm text-muted-foreground mt-2">Equal to planting 1,500 trees</p>
+                </div>
+                <div class="bg-card rounded-2xl border border-border p-8 text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-primary counter" data-target="75000" data-testid="counter-pounds-grown">0</div>
+                    <div class="text-muted-foreground mt-2">Pounds Grown</div>
+                    <p class="text-sm text-muted-foreground mt-2">Fresh, local produce</p>
+                </div>
+                <div class="bg-card rounded-2xl border border-border p-8 text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-primary counter" data-target="50" data-testid="counter-cities-served">0</div>
+                    <div class="text-muted-foreground mt-2">Cities Served</div>
+                    <p class="text-sm text-muted-foreground mt-2">Across 15 countries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environmental Benefits -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Environmental Benefits</h2>
+                <p class="text-xl text-muted-foreground">Urban farming addresses multiple environmental challenges simultaneously</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-card rounded-2xl border border-border p-8">
+                    <i class="fas fa-water text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Water Conservation</h3>
+                    <p class="text-muted-foreground mb-4">Hydroponic systems recycle water continuously, using 95% less water than soil-based agriculture.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Closed-loop water system</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>No agricultural runoff</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Precise nutrient delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-8">
+                    <i class="fas fa-truck text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Reduced Transportation</h3>
+                    <p class="text-muted-foreground mb-4">Growing food locally eliminates long-distance shipping, reducing carbon emissions significantly.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>80% less transportation emissions</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Fresher produce, longer shelf life</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Reduced packaging needs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-8">
+                    <i class="fas fa-seedling text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Soil Preservation</h3>
+                    <p class="text-muted-foreground mb-4">Soilless growing protects valuable topsoil and prevents erosion and degradation.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>No soil erosion</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Preserves natural ecosystems</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Eliminates soil contamination</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-8">
+                    <i class="fas fa-ban text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Chemical-Free Growing</h3>
+                    <p class="text-muted-foreground mb-4">Controlled environments eliminate the need for pesticides and herbicides.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Zero pesticide use</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>No herbicide contamination</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Healthier food and environment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-8">
+                    <i class="fas fa-recycle text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Resource Efficiency</h3>
+                    <p class="text-muted-foreground mb-4">Maximize yield per square foot while minimizing resource consumption.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>10x higher yield per area</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Year-round production</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Minimal land use</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-2xl border border-border p-8">
+                    <i class="fas fa-city text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Urban Air Quality</h3>
+                    <p class="text-muted-foreground mb-4">Plants in urban spaces improve air quality and create healthier city environments.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Improves indoor air quality</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Reduces urban heat island effect</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-primary w-4 mr-2"></i>
+                            <span>Increases urban green space</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Initiatives -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Sustainability Initiatives</h2>
+                <p class="text-xl text-muted-foreground">We're committed to making urban farming even more sustainable</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Carbon Neutral by 2025</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <i class="fas fa-solar-panel text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Renewable Energy</h4>
+                                <p class="text-muted-foreground">Transitioning all our systems to run on solar and other renewable energy sources.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <i class="fas fa-recycle text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Circular Economy</h4>
+                                <p class="text-muted-foreground">Designing products for longevity, repairability, and complete recyclability.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 rounded-lg p-2">
+                                <i class="fas fa-tree text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Carbon Offset Programs</h4>
+                                <p class="text-muted-foreground">Partnering with reforestation projects to offset any remaining emissions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Solar panels and sustainable technology" class="rounded-xl shadow-lg w-full h-auto"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Innovation -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Research & Innovation</h2>
+                <p class="text-xl text-muted-foreground">Continuously improving our environmental impact through research and development</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-card rounded-2xl border border-border p-6 text-center">
+                    <i class="fas fa-microscope text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Advanced Research</h3>
+                    <p class="text-muted-foreground">Partnering with universities to study and optimize urban farming sustainability.</p>
+                </div>
+                
+                <div class="bg-card rounded-2xl border border-border p-6 text-center">
+                    <i class="fas fa-lightbulb text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Innovation Lab</h3>
+                    <p class="text-muted-foreground">Developing next-generation growing technologies with even lower environmental impact.</p>
+                </div>
+                
+                <div class="bg-card rounded-2xl border border-border p-6 text-center">
+                    <i class="fas fa-chart-line text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Impact Measurement</h3>
+                    <p class="text-muted-foreground">Tracking and reporting our environmental impact with full transparency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join the Movement -->
+    <section class="py-16 bg-muted/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Join the Environmental Movement</h2>
+            <p class="text-xl text-muted-foreground mb-8">Every FarmUrban system contributes to a more sustainable future. Start making a positive impact today.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="plans.html" class="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    Start Growing Today
+                </a>
+                <a href="community.html" class="border border-border hover:bg-muted text-foreground px-8 py-3 rounded-lg font-medium transition-all inline-block">
+                    Join Our Community
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!--footer class="bg-card border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="font-bold text-xl">FarmUrban</span>
+                    </div>
+                    <p class="text-muted-foreground mb-4">Growing fresh food in urban spaces through smart technology and community support.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" data-testid="footer-twitter" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" data-testid="footer-facebook" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" data-testid="footer-linkedin" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" data-testid="footer-instagram" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Products</h4>
+                    <div class="space-y-2">
+                        <a href="products.html" data-testid="footer-indoor-systems" class="block text-muted-foreground hover:text-primary transition-colors">Indoor Systems</a>
+                        <a href="products.html" data-testid="footer-outdoor-systems" class="block text-muted-foreground hover:text-primary transition-colors">Outdoor Systems</a>
+                        <a href="products.html" data-testid="footer-commercial-solutions" class="block text-muted-foreground hover:text-primary transition-colors">Commercial Solutions</a>
+                        <a href="products.html" data-testid="footer-accessories" class="block text-muted-foreground hover:text-primary transition-colors">Accessories</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <div class="space-y-2">
+                        <a href="how-it-works.html" data-testid="footer-how-it-works" class="block text-muted-foreground hover:text-primary transition-colors">How it Works</a>
+                        <a href="blog.html" data-testid="footer-learning-hub" class="block text-muted-foreground hover:text-primary transition-colors">Learning Hub</a>
+                        <a href="community.html" data-testid="footer-community" class="block text-muted-foreground hover:text-primary transition-colors">Community</a>
+                        <a href="about-contact.html" data-testid="footer-contact-support" class="block text-muted-foreground hover:text-primary transition-colors">Contact Support</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <div class="space-y-2">
+                        <a href="about-contact.html" data-testid="footer-about-us" class="block text-muted-foreground hover:text-primary transition-colors">About Us</a>
+                        <a href="impact.html" data-testid="footer-environmental-impact" class="block text-muted-foreground hover:text-primary transition-colors">Environmental Impact</a>
+                        <a href="#" data-testid="footer-careers" class="block text-muted-foreground hover:text-primary transition-colors">Careers</a>
+                        <a href="#" data-testid="footer-privacy-policy" class="block text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-border mt-8 pt-8 text-center">
+                <p class="text-muted-foreground" data-testid="text-copyright">&copy; 2024 FarmUrban. All rights reserved.</p>
+            </div>
+        </div>
+    </footer-->
+
+
+    <!-- Footer -->
+<footer class="bg-footer text-footer-foreground border-t border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <svg class="h-8 w-8 text-footer-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span class="font-bold text-xl">FarmUrban</span>
+                </div>
+                <p class="text-footer-muted mb-4">Growing fresh food in urban spaces through smart technology and community support.</p>
+                <div class="flex space-x-4">
+                    <a href="#" data-testid="footer-twitter" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" data-testid="footer-facebook" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" data-testid="footer-linkedin" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" data-testid="footer-instagram" class="text-footer-muted hover:text-footer-link transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Products</h4>
+                <div class="space-y-2">
+                    <a href="products.html" data-testid="footer-indoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Indoor Systems</a>
+                    <a href="products.html" data-testid="footer-outdoor-systems" class="block text-footer-muted hover:text-footer-link transition-colors">Outdoor Systems</a>
+                    <a href="products.html" data-testid="footer-commercial-solutions" class="block text-footer-muted hover:text-footer-link transition-colors">Commercial Solutions</a>
+                    <a href="products.html" data-testid="footer-accessories" class="block text-footer-muted hover:text-footer-link transition-colors">Accessories</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Support</h4>
+                <div class="space-y-2">
+                    <a href="how-it-works.html" data-testid="footer-how-it-works" class="block text-footer-muted hover:text-footer-link transition-colors">How it Works</a>
+                    <a href="blog.html" data-testid="footer-learning-hub" class="block text-footer-muted hover:text-footer-link transition-colors">Learning Hub</a>
+                    <a href="community.html" data-testid="footer-community" class="block text-footer-muted hover:text-footer-link transition-colors">Community</a>
+                    <a href="about-contact.html" data-testid="footer-contact-support" class="block text-footer-muted hover:text-footer-link transition-colors">Contact Support</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Company</h4>
+                <div class="space-y-2">
+                    <a href="about-contact.html" data-testid="footer-about-us" class="block text-footer-muted hover:text-footer-link transition-colors">About Us</a>
+                    <a href="impact.html" data-testid="footer-environmental-impact" class="block text-footer-muted hover:text-footer-link transition-colors">Environmental Impact</a>
+                    <a href="#" data-testid="footer-careers" class="block text-footer-muted hover:text-footer-link transition-colors">Careers</a>
+                    <a href="#" data-testid="footer-privacy-policy" class="block text-footer-muted hover:text-footer-link transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-footer-divider mt-8 pt-8 text-center">
+            <p class="text-footer-muted" data-testid="text-copyright">&copy; 2024 FarmUrban. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="src/main.js"></script>
+
+</body> </html>
