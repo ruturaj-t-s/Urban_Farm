@@ -320,16 +320,100 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="py-16">
+    <!-- Contact Section -->
+<section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Get in Touch</h2>
+            <p class="text-xl text-muted-foreground">Ready to start your urban farming journey? We're here to help you every step of the way.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-envelope text-primary mt-1"></i>
+                        <div>
+                            <div class="font-medium">Email</div>
+                            <div class="text-muted-foreground" data-testid="text-email">urbanfarm.services@gmail.com</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-phone text-primary mt-1"></i>
+                        <div>
+                            <div class="font-medium">Phone</div>
+                            <div class="text-muted-foreground" data-testid="text-phone">2122 (555) 241-200</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                        <div>
+                            <div class="font-medium">Address</div>
+                            <div class="text-muted-foreground" data-testid="text-address">123 Green Tech Park<br/>Bangalore, KA 560005</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-clock text-primary mt-1"></i>
+                        <div>
+                            <div class="font-medium">Support Hours</div>
+                            <div class="text-muted-foreground">Monday - Friday: 8AM - 6PM IST<br/>Weekend: 10AM - 4PM IST</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="thankyou.html" data-testid="link-twitter" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="thankyou.html" data-testid="link-facebook" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="thankyou.html" data-testid="link-linkedin" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="thankyou.html" data-testid="link-instagram" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-card rounded-2xl border border-border p-8 text-center space-y-6">
+                <p class="text-lg font-medium text-foreground">
+                    Please click the button below to fill the feedback form or contact us, Thank You!.
+                </p>
+                
+                <button type="button" 
+                    data-testid="button-send-message" 
+                    class="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 rounded-lg font-medium transition-all"
+                    onclick="window.location.href='https://forms.gle/EK385wimYY9LDv2cA'">
+                    Feedback Form
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+    <!--section class="py-16">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Get in Touch</h2>
                 <p class="text-xl text-muted-foreground">Ready to start your urban farming journey? We're here to help you every step of the way.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12"-->
                 <!-- Contact Info -->
-                <div>
+                <!--div>
                     <h3 class="text-xl font-bold mb-6">Contact Information</h3>
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4">
@@ -382,10 +466,10 @@
                             </a>
                         </div>
                     </div>
-                </div>
+</div-->
 
                 <!-- Contact Form -->
-                <div class="bg-card rounded-2xl border border-border p-8">
+                <!--div class="bg-card rounded-2xl border border-border p-8">
                     <form id="contact-form" data-testid="form-contact" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -428,7 +512,7 @@
                 </div>
             </div>
         </div>
-    </section>
+</section-->
 
     <!-- FAQ Section -->
     <section class="py-16 bg-muted/50">
